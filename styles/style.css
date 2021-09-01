@@ -1,10 +1,16 @@
+/* CSS reset */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* generic */
+
 body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-size: 14px;
     font-family: Arial, sans-serif;
     color: #222;
@@ -18,6 +24,8 @@ a{
     text-decoration: none;
     color: inherit;
 }
+
+/* top nav */
 
 .top-nav{
     padding: 0.5rem;
@@ -33,6 +41,10 @@ a{
 
 .top-nav-link{
     margin: 0 0.5rem;
+}
+
+.top-nav-link:hover, .top-nav-link:active{
+    text-decoration: underline;
 }
 
 .profile-picture{
@@ -51,4 +63,52 @@ a{
 
 .google-apps svg{
     fill: currentColor;
+}
+
+/* footer (bottom) nav */
+
+.footer{
+    margin-top: auto;
+    background: #f2f2f2;
+}
+
+.bottom-nav{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+@media screen and (max-width: 685px){
+    .bottom-nav{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 460px){
+    .bottom-nav{
+        padding: 0;
+    }
+}
+
+.bottom-nav-list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bottom-nav-link{
+    display: block;
+    padding: 1rem;
+    color: #70757a;
+}
+
+@media screen and (max-width: 420px){
+    .bottom-nav-link{
+        padding: 1rem 0.3rem;
+    }
+}
+.bottom-nav-link:hover, .bottom-nav-link:active{
+    text-decoration: underline;
 }
